@@ -1,0 +1,88 @@
+PSScriptAnalyzer: 0 issue(s)
+Pester v5.7.1
+
+Starting discovery in 3 files.
+Discovery found 48 tests in 273ms.
+Running tests.
+
+Running tests from '/workspace/ps-admin-toolkit/tests/Accounts.Tests.ps1'
+Describing Get-StaleAccounts
+  [+] returns enabled accounts inactive for N+ days, plus never-logged-on 163ms (127ms|37ms)
+  [+] ignores disabled accounts 9ms (8ms|1ms)
+  [+] can exclude never-logged-on accounts 5ms (4ms|1ms)
+  [+] computes DaysInactive 10ms (9ms|1ms)
+  [+] queries AD with LastLogonDate when not simulating 338ms (337ms|1ms)
+
+Describing Reset-UserPassword
+  [+] simulates a reset for a known user and can show the generated password 209ms (205ms|4ms)
+  [+] fails cleanly for an unknown user 27ms (26ms|1ms)
+  [+] accepts pipeline input 20ms (19ms|1ms)
+ Context against AD (mocked)
+   [+] resets, forces change at logon and unlocks 93ms (88ms|5ms)
+What if: Performing the operation "Reset password" on target "jdoe".
+   [+] does nothing with -WhatIf 22ms (21ms|1ms)
+
+Describing Get-RandomPassword (private)
+  [+] meets complexity and avoids ambiguous characters 378ms (376ms|2ms)
+
+Describing Write-AdminLog
+  [+] writes one JSON object per line with level, source and data 39ms (37ms|2ms)
+  [+] still logs when -WhatIf is in effect 13ms (10ms|3ms)
+
+Running tests from '/workspace/ps-admin-toolkit/tests/Onboarding.Tests.ps1'
+Describing New-BulkADUser
+ Context -Simulate (no AD required)
+   [+] returns one row per CSV line 4ms (2ms|2ms)
+   [+] numbers a colliding account name (jsmith already exists) 3ms (2ms|1ms)
+   [+] strips accents from account names 5ms (4ms|1ms)
+   [+] skips rows missing required fields 2ms (2ms|1ms)
+   [+] uses the OU from the CSV when given 3ms (2ms|1ms)
+   [+] writes a report without passwords 4ms (3ms|1ms)
+   [+] never calls New-ADUser 3ms (3ms|1ms)
+ Context against AD (mocked)
+   [+] creates the user with a SecureString password and change-at-logon 137ms (135ms|1ms)
+What if: Performing the operation "Create AD user" on target "Mike Smith (msmith2@contoso.com) in OU=Users,OU=Staff,DC=contoso,DC=com".
+   [+] honours -WhatIf 17ms (17ms|1ms)
+   [+] reports Failed instead of throwing when AD errors 25ms (24ms|1ms)
+  [+] throws a helpful error when AD is missing and -Simulate is not used 19ms (18ms|1ms)
+
+Describing Remove-ADUserOffboard
+  [+] simulates offboarding and reports missing users 25ms (24ms|1ms)
+ Context against AD (mocked)
+   [+] disables, removes groups, stamps and moves the account 49ms (47ms|1ms)
+What if: Performing the operation "Disable, remove groups, move to Disabled OU" on target "bjohnson (Bob Johnson)".
+   [+] makes no changes with -WhatIf 11ms (11ms|1ms)
+
+Running tests from '/workspace/ps-admin-toolkit/tests/System.Tests.ps1'
+Describing Get-SystemInventory
+  [+] returns the core fields on any platform 84ms (83ms|1ms)
+  [+] exports CSV, JSON and HTML reports 39ms (38ms|1ms)
+  [+] only writes the requested formats 13ms (12ms|1ms)
+  [+] parses Linux /proc and os-release files (mocked filesystem) 16ms (15ms|1ms)
+  [!] collects Windows data via CIM 2ms (0ms|2ms)
+
+Describing Invoke-DiskCleanup
+What if: Performing the operation "Delete files" on target "/tmp/257ce221-8b1f-4d71-8c82-af404c5dac33/7b5b4a07-494b-447d-a9a6-fdfb0e613780 (1 files, 0 MB)".
+  [+] reports but does not delete with -WhatIf 86ms (83ms|2ms)
+  [+] deletes only files older than -OlderThanDays and reports space freed 18ms (17ms|1ms)
+  [+] counts locked/undeletable files as skipped 36ms (35ms|1ms)
+  [+] marks Windows-only targets as unsupported on Linux/macOS 9ms (8ms|1ms)
+  [!] stops wuauserv around the update cache cleanup 2ms (0ms|2ms)
+
+Describing Test-ServiceHealth
+  [+] requires at least one check 15ms (12ms|3ms)
+  [+] reports open and closed ports 32ms (31ms|1ms)
+  [+] treats HTTP 4xx/5xx as unhealthy 19ms (18ms|1ms)
+  [+] reads checks from a JSON config file 38ms (38ms|1ms)
+  [+] restarts a stopped service when -RestartFailed is used 43ms (42ms|1ms)
+What if: Performing the operation "Restart service" on target "Spooler".
+  [+] does not restart with -WhatIf 16ms (15ms|1ms)
+  [+] sends webhook and Telegram alerts only when something is unhealthy 55ms (55ms|1ms)
+  [+] skips Telegram when the token env var is missing 19ms (18ms|1ms)
+  [!] checks a real Windows service 1ms (0ms|1ms)
+
+Describing Module quality
+  [+] exports every public function with comment-based help and examples 60ms (59ms|1ms)
+  [+] supports -WhatIf on every state-changing command 15ms (14ms|1ms)
+Tests completed in 3.25s
+Tests Passed: 45, Failed: 0, Skipped: 3, Inconclusive: 0, NotRun: 0

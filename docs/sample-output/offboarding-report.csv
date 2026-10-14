@@ -1,0 +1,4 @@
+"SamAccountName","DisplayName","GroupsRemoved","MovedTo","Description","Status","Message"
+"bjohnson","Bob Johnson","Finance-Staff;VPN-Users;SharePoint-Finance","OU=Disabled Users,DC=contoso,DC=com","Offboarded 2026-10-14 | INC-20431 | Resigned","Simulated","Would disable, remove 3 group(s), move to Disabled OU"
+"kwilliams","Kara Williams","Engineering;VPN-Users","OU=Disabled Users,DC=contoso,DC=com","Offboarded 2026-10-14 | INC-20432 | Contract ended","Simulated","Would disable, remove 2 group(s), move to Disabled OU"
+"zz-notreal",,,"OU=Disabled Users,DC=contoso,DC=com","Offboarded 2026-10-14 | INC-20433 | Resigned","Failed","User 'zz-notreal' not found in simulated directory"

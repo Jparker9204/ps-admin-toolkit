@@ -1,0 +1,6 @@
+"SamAccountName","DisplayName","UserPrincipalName","OU","Groups","Status","Message"
+"mgonzalez","Maria Gonzalez","mgonzalez@contoso.com","OU=Users,OU=Staff,DC=contoso,DC=com","Finance-Staff;VPN-Users","Simulated","Would create user"
+"jsmith2","James Smith","jsmith2@contoso.com","OU=IT,OU=Staff,DC=contoso,DC=com","IT-Helpdesk;VPN-Users","Simulated","Name collision; numbered to jsmith2"
+"apatel","Aisha Patel","apatel@contoso.com","OU=Users,OU=Staff,DC=contoso,DC=com","Engineering;VPN-Users","Simulated","Would create user"
+"cdubois","Chloé Dubois","cdubois@contoso.com","OU=Users,OU=Staff,DC=contoso,DC=com","Marketing","Simulated","Would create user"
+,"Reed",,,,"Skipped","Missing required column(s): FirstName"

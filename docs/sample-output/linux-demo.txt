@@ -1,0 +1,87 @@
+### INVENTORY
+
+ComputerName : grok-bot-vm-475513731
+OS           : Debian GNU/Linux 13 (trixie)
+CPU          : Intel(R) Xeon(R) Processor
+Cores        : 8
+MemoryGB     : 15.6
+MemoryFreeGB : 6.9
+UptimeDays   : 0.31
+
+
+
+Name FileSystem SizeGB FreeGB PercentFree
+---- ---------- ------ ------ -----------
+/    ext4       125.00 119.40       95.50
+
+
+
+Name    Status IPv4       Gateway
+----    ------ ----       -------
+enp0s4  Up     172.30.0.2 172.30.0.1
+docker0 Down   172.17.0.1 
+
+
+Software packages: 1022
+inventory-grok-bot-vm-475513731-20261014-001222.json
+inventory-grok-bot-vm-475513731-20261014-001222-summary.csv
+inventory-grok-bot-vm-475513731-20261014-001222-disks.csv
+inventory-grok-bot-vm-475513731-20261014-001222-network.csv
+inventory-grok-bot-vm-475513731-20261014-001222-software.csv
+inventory-grok-bot-vm-475513731-20261014-001222.html
+### HEALTH
+
+Type    Target                            Status    Detail                               ResponseMs
+----    ------                            ------    ------                               ----------
+Service ssh                               Unhealthy systemctl not available on this host 
+Service cron                              Unhealthy systemctl not available on this host 
+Port    github.com:443                    Healthy   TCP connect OK                       13
+Port    1.1.1.1:53                        Healthy   TCP connect OK                       0
+Port    127.0.0.1:3389                    Unhealthy Connection refused                   
+Url     https://www.powershellgallery.com Healthy   HTTP 200                             228
+Url     https://httpbin.org/status/503    Unhealthy HTTP 503                             85
+
+
+### ONBOARD
+
+SamAccountName DisplayName    UserPrincipalName     Status    Message
+-------------- -----------    -----------------     ------    -------
+mgonzalez      Maria Gonzalez mgonzalez@contoso.com Simulated Would create user
+jsmith2        James Smith    jsmith2@contoso.com   Simulated Name collision; numbered to jsmith2
+apatel         Aisha Patel    apatel@contoso.com    Simulated Would create user
+cdubois        Chloé Dubois   cdubois@contoso.com   Simulated Would create user
+               Reed                                 Skipped   Missing required column(s): FirstName
+
+
+### OFFBOARD
+
+SamAccountName GroupsRemoved                              Status    Message
+-------------- -------------                              ------    -------
+bjohnson       Finance-Staff;VPN-Users;SharePoint-Finance Simulated Would disable, remove 3 group(s), move to Disabled OU
+kwilliams      Engineering;VPN-Users                      Simulated Would disable, remove 2 group(s), move to Disabled OU
+zz-notreal                                                Failed    User 'zz-notreal' not found in simulated directory
+
+
+### STALE
+
+SamAccountName DisplayName    Department LastLogonDate       DaysInactive Reason
+-------------- -----------    ---------- -------------       ------------ ------
+temp-intern    Summer Intern  Operations                                  Never logged on
+svc-backup     Backup Service IT         12/01/2025 00:00:00 317          No logon in 90+ days
+tmiller        Tom Miller     Marketing  04/15/2026 00:00:00 182          No logon in 90+ days
+bjohnson       Bob Johnson    Finance    06/02/2026 00:00:00 134          No logon in 90+ days
+
+
+### CLEANUP
+
+Target      FilesFound MBFound MBFreed Status
+------      ---------- ------- ------- ------
+UserTemp             0    0.00       0 NothingToClean
+WindowsTemp          0       0       0 NotSupportedOnPlatform
+RecycleBin           0       0       0 NotSupportedOnPlatform
+
+
+### LOG
+{"timestamp":"2026-10-14T05:12:22.2399316Z","level":"Info","source":"Get-SystemInventory","host":"grok-bot-vm-475513731","user":"box","message":"Inventory exported for grok-bot-vm-475513731","data":{"files":["/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222.json","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-summary.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-disks.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-network.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-software.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222.html"]}}
+{"timestamp":"2026-10-14T05:12:22.8108197Z","level":"Warning","source":"Test-ServiceHealth","host":"grok-bot-vm-475513731","user":"box","message":"Health check: 4 of 7 unhealthy","data":{"unhealthy":4,"total":7}}
+{"timestamp":"2026-10-14T05:12:22.8621647Z","level":"Info","source":"New-BulkADUser","host":"grok-bot-vm-475513731","user":"box","message":"Onboarding started: 5 row(s) from ./samples/new-hires.csv","data":{"simulate":true}}

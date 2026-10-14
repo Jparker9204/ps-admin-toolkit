@@ -1,0 +1,44 @@
+{
+  "ComputerName": "grok-bot-vm-475513731",
+  "OS": "Debian GNU/Linux 13 (trixie)",
+  "OSVersion": "13",
+  "CPU": "Intel(R) Xeon(R) Processor",
+  "Cores": 8,
+  "MemoryGB": 15.6,
+  "MemoryFreeGB": 6.9,
+  "UptimeDays": 0.31,
+  "LastBoot": "2026-10-13T16:45:58",
+  "Disks": [
+    {
+      "Name": "/",
+      "FileSystem": "ext4",
+      "SizeGB": 125.0,
+      "FreeGB": 119.4,
+      "PercentFree": 95.5
+    }
+  ],
+  "Software": [],
+  "NetworkAdapters": [
+    {
+      "Name": "enp0s4",
+      "Status": "Up",
+      "Type": "Ethernet",
+      "MAC": "82:2B:38:3D:BC:D0",
+      "SpeedMbps": 4294967295.0,
+      "IPv4": "172.30.0.2",
+      "Gateway": "172.30.0.1",
+      "DnsServers": "10.0.0.2"
+    },
+    {
+      "Name": "docker0",
+      "Status": "Down",
+      "Type": "Ethernet",
+      "MAC": "7A:D4:50:9C:28:7E",
+      "SpeedMbps": 4294967295.0,
+      "IPv4": "172.17.0.1",
+      "Gateway": "",
+      "DnsServers": "10.0.0.2"
+    }
+  ],
+  "CollectedAt": "2026-10-14T00:12:32"
+}
