@@ -1,0 +1,18 @@
+# Generated reports and logs
+reports/
+*.jsonl
+testResults*.xml
+coverage*.xml
+/out/
+
+# Secrets / local config
+.env
+*.secret.*
+local.*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+*.swp
