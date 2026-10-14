@@ -1,0 +1,5 @@
+{
+  "services": ["ssh", "cron"],
+  "ports": ["github.com:443", "1.1.1.1:53", "127.0.0.1:3389"],
+  "urls": ["https://www.powershellgallery.com", "https://httpbin.org/status/503"]
+}
