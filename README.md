@@ -139,7 +139,7 @@ Reset-UserPassword -Identity jsmith -Unlock -ShowPassword   # prompts to confirm
 Get-SystemInventory -OutputPath ./reports | Select-Object ComputerName, OS, CPU, Cores, MemoryGB, UptimeDays
 ```
 ```text
-ComputerName : grok-bot-vm-475513731
+ComputerName : lab-ubuntu-01
 OS           : Debian GNU/Linux 13 (trixie)
 CPU          : Intel(R) Xeon(R) Processor
 Cores        : 8
@@ -202,7 +202,7 @@ RecycleBin           0       0       0 NotSupportedOnPlatform
 Get-Content $env:ADMINTOOLKIT_LOG | ConvertFrom-Json | Where-Object level -eq 'Warning'
 ```
 ```json
-{"timestamp":"2026-10-14T05:12:22.8108197Z","level":"Warning","source":"Test-ServiceHealth","host":"grok-bot-vm-475513731","user":"box","message":"Health check: 4 of 7 unhealthy","data":{"unhealthy":4,"total":7}}
+{"timestamp":"2026-10-14T05:12:22.8108197Z","level":"Warning","source":"Test-ServiceHealth","host":"lab-ubuntu-01","user":"jparker","message":"Health check: 4 of 7 unhealthy","data":{"unhealthy":4,"total":7}}
 ```
 
 ## Testing & quality

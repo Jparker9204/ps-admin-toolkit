@@ -1,6 +1,6 @@
 ### INVENTORY
 
-ComputerName : grok-bot-vm-475513731
+ComputerName : lab-ubuntu-01
 OS           : Debian GNU/Linux 13 (trixie)
 CPU          : Intel(R) Xeon(R) Processor
 Cores        : 8
@@ -23,12 +23,12 @@ docker0 Down   172.17.0.1
 
 
 Software packages: 1022
-inventory-grok-bot-vm-475513731-20261014-001222.json
-inventory-grok-bot-vm-475513731-20261014-001222-summary.csv
-inventory-grok-bot-vm-475513731-20261014-001222-disks.csv
-inventory-grok-bot-vm-475513731-20261014-001222-network.csv
-inventory-grok-bot-vm-475513731-20261014-001222-software.csv
-inventory-grok-bot-vm-475513731-20261014-001222.html
+inventory-lab-ubuntu-01-20261014-001222.json
+inventory-lab-ubuntu-01-20261014-001222-summary.csv
+inventory-lab-ubuntu-01-20261014-001222-disks.csv
+inventory-lab-ubuntu-01-20261014-001222-network.csv
+inventory-lab-ubuntu-01-20261014-001222-software.csv
+inventory-lab-ubuntu-01-20261014-001222.html
 ### HEALTH
 
 Type    Target                            Status    Detail                               ResponseMs
@@ -82,6 +82,6 @@ RecycleBin           0       0       0 NotSupportedOnPlatform
 
 
 ### LOG
-{"timestamp":"2026-10-14T05:12:22.2399316Z","level":"Info","source":"Get-SystemInventory","host":"grok-bot-vm-475513731","user":"box","message":"Inventory exported for grok-bot-vm-475513731","data":{"files":["/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222.json","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-summary.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-disks.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-network.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222-software.csv","/tmp/inv-out/inventory-grok-bot-vm-475513731-20261014-001222.html"]}}
-{"timestamp":"2026-10-14T05:12:22.8108197Z","level":"Warning","source":"Test-ServiceHealth","host":"grok-bot-vm-475513731","user":"box","message":"Health check: 4 of 7 unhealthy","data":{"unhealthy":4,"total":7}}
-{"timestamp":"2026-10-14T05:12:22.8621647Z","level":"Info","source":"New-BulkADUser","host":"grok-bot-vm-475513731","user":"box","message":"Onboarding started: 5 row(s) from ./samples/new-hires.csv","data":{"simulate":true}}
+{"timestamp":"2026-10-14T05:12:22.2399316Z","level":"Info","source":"Get-SystemInventory","host":"lab-ubuntu-01","user":"jparker","message":"Inventory exported for lab-ubuntu-01","data":{"files":["/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222.json","/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222-summary.csv","/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222-disks.csv","/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222-network.csv","/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222-software.csv","/tmp/inv-out/inventory-lab-ubuntu-01-20261014-001222.html"]}}
+{"timestamp":"2026-10-14T05:12:22.8108197Z","level":"Warning","source":"Test-ServiceHealth","host":"lab-ubuntu-01","user":"jparker","message":"Health check: 4 of 7 unhealthy","data":{"unhealthy":4,"total":7}}
+{"timestamp":"2026-10-14T05:12:22.8621647Z","level":"Info","source":"New-BulkADUser","host":"lab-ubuntu-01","user":"jparker","message":"Onboarding started: 5 row(s) from ./samples/new-hires.csv","data":{"simulate":true}}
