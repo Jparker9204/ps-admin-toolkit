@@ -1,0 +1,6 @@
+FirstName,LastName,Department,Title,Office,Manager,EmployeeId,OU,Groups
+Maria,Gonzalez,Finance,Staff Accountant,Huntsville,lnguyen,E1042,,Finance-Staff;VPN-Users
+James,Smith,IT,Help Desk Technician,Huntsville,dwright,E1043,"OU=IT,OU=Staff,DC=contoso,DC=com",IT-Helpdesk;VPN-Users
+Aisha,Patel,Engineering,Systems Engineer,Madison,kbrooks,E1044,,Engineering;VPN-Users
+Chloé,Dubois,Marketing,Marketing Coordinator,Remote,tmiller,E1045,,Marketing
+,Reed,Operations,Logistics Analyst,Huntsville,dwright,E1046,,Operations

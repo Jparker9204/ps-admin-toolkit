@@ -1,0 +1,10 @@
+SamAccountName,DisplayName,Enabled,LastLogonDate,Department,MemberOf,DistinguishedName
+jsmith,John Smith,True,2026-10-10,Sales,Domain Users;Sales-Staff;VPN-Users,"CN=John Smith,OU=Staff,DC=contoso,DC=com"
+bjohnson,Bob Johnson,True,2026-06-02,Finance,Domain Users;Finance-Staff;VPN-Users;SharePoint-Finance,"CN=Bob Johnson,OU=Staff,DC=contoso,DC=com"
+kwilliams,Kara Williams,True,2026-09-28,Engineering,Domain Users;Engineering;VPN-Users,"CN=Kara Williams,OU=Staff,DC=contoso,DC=com"
+lnguyen,Linh Nguyen,True,2026-10-12,Finance,Domain Users;Finance-Managers,"CN=Linh Nguyen,OU=Staff,DC=contoso,DC=com"
+dwright,Dana Wright,True,2026-10-13,IT,Domain Users;IT-Admins;IT-Helpdesk,"CN=Dana Wright,OU=IT,OU=Staff,DC=contoso,DC=com"
+tmiller,Tom Miller,True,2026-04-15,Marketing,Domain Users;Marketing,"CN=Tom Miller,OU=Staff,DC=contoso,DC=com"
+svc-backup,Backup Service,True,2025-12-01,IT,Domain Users;Backup Operators,"CN=svc-backup,OU=Service Accounts,DC=contoso,DC=com"
+temp-intern,Summer Intern,True,,Operations,Domain Users,"CN=Summer Intern,OU=Staff,DC=contoso,DC=com"
+rold,Rita Old,False,2025-08-01,Sales,Domain Users,"CN=Rita Old,OU=Disabled Users,DC=contoso,DC=com"
